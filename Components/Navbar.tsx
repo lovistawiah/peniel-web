@@ -27,9 +27,20 @@ const Navbar = () => {
         '>
         
             {/* about us */}
-            <li >
-            <Link href={"/"}>About Us <span> <FaChevronDown  /></span></Link>
-        
+            <li className='cursor-pointer flex flex-col items-center justify-center h-fit!
+             bg-yellow-500'>
+           <p className='flex items-center gap-1'> About Us <span> <FaChevronDown /></span></p>
+            <ul>
+                <li>
+                    <Link href={"/"}>Who We Are</Link>
+                </li>
+                <li>
+                    <Link href={"/"}>What We Do</Link>
+                </li>
+                <li>
+                    <Link href={"/"}>Who We Believe</Link>
+                </li>
+            </ul>
             </li>
 
             {/* Events */}
@@ -44,10 +55,25 @@ const Navbar = () => {
             <li >
             <Link href={"/"}>Contact Us</Link>
             </li>
+
             {/* Media */}
-            <li >
-            <Link href={"/"}>Media <span><FaChevronDown /></span></Link>
-            
+            <li className='flex flex-col items-center justify-center h-fit!'>
+            <p className='flex items-center gap-1'>Media <span> <FaChevronDown /></span></p>
+            <div className='w-full h-full'>
+            <ul className='text-base [&>li]:w-full [&>li]:h-fit [&>li]:p-2 [&>li]:border-b-[0.5px] [&>li]:border-b-[#454545] [&>li]:bg-[#1C1C1C] [&>li>a]:underline [&>li>a]:w-full [&>li>a]:border [&>li>a]:border-red-800
+            '>
+                <li>
+                    <Link href={"/"}>Who We Are</Link>
+                </li>
+                <li>
+                    <Link href={"/"}>What We Do</Link>
+                </li>
+                <li>
+                    <Link href={"/"}>Who We Believe</Link>
+                </li>
+            </ul>
+            </div>
+           
             </li>
             {/* Departments */}
             <li >
