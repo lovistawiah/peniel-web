@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Titillium_Web, Potta_One } from "next/font/google";
 import "./globals.css";
 import "./app.css";
-import Navbar from "@/Components/Navbar";
+// import Navbar from "@/Components/Navbar";
 
 const potta_One = Potta_One({
   subsets: ['latin'],
@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={`${potta_One.variable} ${titillium.variable} antialiased`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>
