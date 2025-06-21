@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 import JoinUsLive from './JoinUsLive'
-import ContentBar from './ContentBar'
 import Box from './Box'
+import SectionContent from './SectionContext'
 
 const LandingPage = () => {
 return (
@@ -33,8 +33,9 @@ return (
         </div>
     </section>
     <JoinUsLive />
-    <ContentBar contentTitle='Discover' />
+  
     {/* new to peniel */}
+    <SectionContent contentTitle='Discover'>
     <Box 
      image='/titus.jpg'
      title1='New to'
@@ -43,7 +44,7 @@ return (
      description='Discover what we are all about.'
      alt='new to peniel'
      key={1}
-    />
+     />
     {/* location */}
     <Box
       image='/location.jpg'
@@ -53,7 +54,8 @@ return (
       description='Adjacent White Daisy School'
       alt='location'
       key={2}
-    />
+      />
+      </SectionContent>
     </div>
 )
 }

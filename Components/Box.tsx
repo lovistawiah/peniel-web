@@ -8,7 +8,7 @@ const Box = ({image, title1,title2, link, alt, description,}: {image: string, ti
     return (
         <div className="w-full h-fit flex justify-center">
             
-            <Link href={link} className="w-[90%] h-[370px] md:h-[300px] relative">
+            <Link href={link} className="w-[90%] md:w-[95%]  h-[370px] md:h-[420px] relative">
             <Image src={image} width={1000} height={1000} alt={alt} className="w-full h-full rounded-[20px] opacity-70 object-cover" priority={false} quality={100} placeholder='blur' blurDataURL={image} loading='lazy' draggable={false} unoptimized={true} />
             <div className="absolute top-0 left-0 right-0 bottom-0 ">
                 <div className="w-full relative bg-transparent h-[60px]">
