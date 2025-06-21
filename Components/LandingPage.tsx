@@ -34,6 +34,7 @@ return (
     </section>
     <JoinUsLive />
     <ContentBar contentTitle='Discover' />
+    {/* new to peniel */}
     <Box 
      image='/titus.jpg'
      title1='New to'
@@ -42,6 +43,16 @@ return (
      description='Discover what we are all about.'
      alt='new to peniel'
      key={1}
+    />
+    {/* location */}
+    <Box
+      image='/location.jpg'
+      title1='Adjorman'
+      title2='Round About'
+      link='/'
+      description='Adjacent White Daisy School'
+      alt='location'
+      key={2}
     />
     </div>
 )
