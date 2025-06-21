@@ -3,6 +3,7 @@ import React from 'react'
 import JoinUsLive from './JoinUsLive'
 import Box from './Box'
 import SectionContent from './SectionContext'
+import Everyone from './Everyone'
 
 const LandingPage = () => {
 return (
@@ -56,6 +57,8 @@ return (
       key={2}
       />
       </SectionContent>
+      {/* a place of everyone */}
+      <Everyone />
     </div>
 )
 }
