@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import JoinUsLive from './JoinUsLive'
 import ContentBar from './ContentBar'
+import Box from './Box'
 
 const LandingPage = () => {
 return (
@@ -33,6 +34,15 @@ return (
     </section>
     <JoinUsLive />
     <ContentBar contentTitle='Discover' />
+    <Box 
+     image='/titus.jpg'
+     title1='New to'
+     title2='Peniel'
+     link='/'
+     description='Discover what we are all about.'
+     alt='new to peniel'
+     key={1}
+    />
     </div>
 )
 }
