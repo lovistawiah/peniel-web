@@ -5,6 +5,7 @@ import Box from './Box'
 import SectionContent from './SectionContext'
 import Everyone from './Everyone'
 import WordsOfGrace from './WordsOfGrace'
+import PreviewEventBox from './PreviewEventBox'
 
 const LandingPage = () => {
 return (
@@ -62,6 +63,24 @@ return (
       <Everyone />
         {/* words of grace */}
         <WordsOfGrace />
+
+        {/* events */}
+    <SectionContent contentTitle='Events'> 
+        <PreviewEventBox 
+        image='/titus.jpg'
+        link='/'
+        className='bg-[#ebbd48] text-black'
+        alt='new to peniel'
+        key={1}
+        />
+        <PreviewEventBox 
+        image='/titus.jpg'
+        link='/'
+        className='bg-[#ebbd48] text-black'
+        alt='new to peniel'
+        key={2}
+        />
+    </SectionContent>
     </div>
 )
 }
