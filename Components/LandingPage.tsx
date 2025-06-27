@@ -4,13 +4,14 @@ import JoinUsLive from './JoinUsLive'
 import Box from './Box'
 import SectionContent from './SectionContext'
 import Everyone from './Everyone'
+import WordsOfGrace from './WordsOfGrace'
 
 const LandingPage = () => {
 return (
     <div className='w-full h-full flex flex-col gap-10'>
         <section className='h-[95vh] w-full relative overflow-hidden'>
         {/* image */}
-        <Image src={"/landing_pic.jpg"} width={600} height={400} alt='landing pic' className='h-full w-full object-cover opacity-90' priority={false} quality={100} placeholder='blur' blurDataURL={"/landing_pic.jpg"} loading='lazy' draggable={false} unoptimized={true}
+        <Image src={"/landing.jpg"} width={600} height={400} alt='landing pic' className='h-full w-full object-cover opacity-90' priority={false} quality={100} placeholder='blur' blurDataURL={"/landing_pic.jpg"} loading='lazy' draggable={false} unoptimized={true}
         />
         {/* overlay */}
         <div className='absolute bottom-0 md:bottom-0 left-0 right-0 text-white w-full h-[323px] md:h-[325px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(17,17,17,0.99)_80%)] md:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(17,17,17,0.99)_96%)] flex items-end z-5 p-5 md:pl-10'>
@@ -59,6 +60,8 @@ return (
       </SectionContent>
       {/* a place of everyone */}
       <Everyone />
+        {/* words of grace */}
+        <WordsOfGrace />
     </div>
 )
 }
