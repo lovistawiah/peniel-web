@@ -27,12 +27,12 @@ const Navbar = () => {
         '>
         
             {/* about us */}
-            <li className='cursor-pointer flex flex-col items-center justify-center h-fit!
+             <li className='cursor-pointer flex flex-col items-center justify-center h-fit!
              bg-yellow-500'>
-           <p className='flex items-center gap-1'> About Us <span> <FaChevronDown /></span></p>
-            <ul>
+           <p className='flex items-center w-full gap-1 justify-center bg-red-500'> About Us <span> <FaChevronDown /></span></p>
+            <ul className=' w-full h-fit [&_li]:flex [&_li]:justify-center [&_li]:items-center [&_li]:w-full [&_li]:h-fit [&_a]:w-full [&_a]:h-full  flex flex-col '>
                 <li>
-                    <Link href={"/"}>Who We Are</Link>
+                    <Link href={"/about"}>Who We Are</Link>
                 </li>
                 <li>
                     <Link href={"/"}>What We Do</Link>
@@ -57,13 +57,12 @@ const Navbar = () => {
             </li>
 
             {/* Media */}
-            <li className='flex flex-col items-center justify-center h-fit!'>
-            <p className='flex items-center gap-1'>Media <span> <FaChevronDown /></span></p>
-            <div className='w-full h-full'>
-            <ul className='text-base [&>li]:w-full [&>li]:h-fit [&>li]:p-2 [&>li]:border-b-[0.5px] [&>li]:border-b-[#454545] [&>li]:bg-[#1C1C1C] [&>li>a]:underline [&>li>a]:w-full [&>li>a]:border [&>li>a]:border-red-800
-            '>
+             <li className='cursor-pointer flex flex-col items-center justify-center h-fit!
+             bg-yellow-500'>
+           <p className='flex items-center w-full gap-1 justify-center bg-red-500'> About Us <span> <FaChevronDown /></span></p>
+            <ul className='w-full h-fit [&_li]:flex [&_li]:justify-center [&_li]:items-center [&_li]:w-full [&_li]:h-fit [&_a]:w-full [&_a]:h-full  flex flex-col '>
                 <li>
-                    <Link href={"/"}>Who We Are</Link>
+                    <Link href={"/about"}>Who We Are</Link>
                 </li>
                 <li>
                     <Link href={"/"}>What We Do</Link>
@@ -72,8 +71,6 @@ const Navbar = () => {
                     <Link href={"/"}>Who We Believe</Link>
                 </li>
             </ul>
-            </div>
-           
             </li>
             {/* Departments */}
             <li >
