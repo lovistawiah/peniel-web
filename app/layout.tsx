@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${potta_One.variable} ${titillium.variable} antialiased`}
+        className={`${potta_One.variable} ${titillium.variable} antialiased max-w-screen-2xl mx-auto`}
       >
         <Navbar />
         {children}
