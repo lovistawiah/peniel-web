@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 const Navbar = () => {
   return (
-    <section className='bg-blue-700 w-full'>
+    <section className='bg-[#111111] w-full  font-potta text-white'>
         <nav>
             <div className="flex items-center justify-between p-[23px] ">
                 {/* Menubar */}
@@ -23,14 +23,16 @@ const Navbar = () => {
             </div>
             {/* Nav Links */}
         
-        <ul className='flex flex-col items-center justify-center text-white h-fit w-full font-Potta [&>li]:text-center [&>li]:text-[20px] [&>li]:border-b-[0.5px] [&>li]:border-b-[#454545] [&>li]:w-full [&>li]:h-[70px] [&>li]:flex [&>li]:items-center [&>li]:justify-center [&>li>a]:flex [&>li>a]:justify-center [&>li>a]:items-center [&>li>a]:gap-1 [&>li>a]:w-full [&>li>a]:h-full first:border-t-[0.5px] 
-        '>
+        <ul className='flex flex-col items-center justify-center text-white h-fit w-full font-Potta [&_li]:text-center [&_li]:text-[20px] [&_li]:border-b-[0.5px] [&_li]:border-b-[#454545] [&_li]:w-full [&_li]:h-[70px] [&_li]:flex [&_li]:items-center [&_li]:justify-center [&>li>p]:flex [&>li>p]:justify-center [&>li>p]:items-center [&>li>p]:gap-[4px] [&>li>p]:underline  [&_li_a]:flex [&_li_a]:justify-center [&_li_a]:items-center [&_li]:cursor-pointer [&_li_a]:gap-1 [&_li_a]:w-full [&_li_a]:h-full [&_li_a]:underline first:border-t-[0.5px] '>
         
             {/* about us */}
-             <li className='cursor-pointer flex flex-col items-center justify-center h-fit!
-             bg-yellow-500'>
-           <p className='flex items-center w-full gap-1 justify-center bg-red-500'> About Us <span> <FaChevronDown /></span></p>
-            <ul className=' w-full h-fit [&_li]:flex [&_li]:justify-center [&_li]:items-center [&_li]:w-full [&_li]:h-fit [&_a]:w-full [&_a]:h-full  flex flex-col '>
+            <li>
+                <p>About Us <FaChevronDown /></p>
+            </li>
+
+            {/* sub links to the about page */}
+            <section className='w-full h-fit'>
+            <ul className=' w-full h-fit [&_li]:bg-[#1C1C1C]'>
                 <li>
                     <Link href={"/about"}>Who We Are</Link>
                 </li>
@@ -41,7 +43,7 @@ const Navbar = () => {
                     <Link href={"/"}>Who We Believe</Link>
                 </li>
             </ul>
-            </li>
+            </section>
 
             {/* Events */}
             <li>
@@ -56,22 +58,9 @@ const Navbar = () => {
             <Link href={"/"}>Contact Us</Link>
             </li>
 
-            {/* Media */}
-             <li className='cursor-pointer flex flex-col items-center justify-center h-fit!
-             bg-yellow-500'>
-           <p className='flex items-center w-full gap-1 justify-center bg-red-500'> About Us <span> <FaChevronDown /></span></p>
-            <ul className='w-full h-fit [&_li]:flex [&_li]:justify-center [&_li]:items-center [&_li]:w-full [&_li]:h-fit [&_a]:w-full [&_a]:h-full  flex flex-col '>
-                <li>
-                    <Link href={"/about"}>Who We Are</Link>
-                </li>
-                <li>
-                    <Link href={"/"}>What We Do</Link>
-                </li>
-                <li>
-                    <Link href={"/"}>Who We Believe</Link>
-                </li>
-            </ul>
-            </li>
+            {/* Media*/}
+
+
             {/* Departments */}
             <li >
             <Link href={"/"}>Departments</Link>
@@ -82,7 +71,7 @@ const Navbar = () => {
             </li>
         {/* Give */}
         <li >
-            <Link href={"/"}>Give</Link>
+            <Link className='text-[#EBBD48]' href={"/"}>Give</Link>
             </li>
         {/* Social Media Icons */}
         <li className='gap-5 **:text-3xl px-3'>
