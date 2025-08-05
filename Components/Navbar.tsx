@@ -22,6 +22,9 @@ const Navbar = () => {
             const currentScrollY = window.scrollY;
             if (currentScrollY > lastScrollY.current && currentScrollY > 10) {
                 setShow(false); // scrolling down, hide
+                if (isOpen){
+                    toggleMenu(); // close menu if it's open while scrolling down
+                }
             } else {
                 setShow(true); // scrolling up, show
             }
@@ -29,24 +32,24 @@ const Navbar = () => {
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [isOpen, toggleMenu]);
 
     return (
-        <section className={`${isOpen ? 'bg-[#111111]' : 'bg-transparent'} w-full font-potta text-white sticky top-0 shadow-md z-50 transition-transform duration-300 ${(show ? ' translate-y-0' : ' -translate-y-full')}`}
-            style={{ willChange: 'transform' }} >
+        <section className={` w-full overflow-x-hidden overflow-y-scroll font-potta text-white fixed top-0 shadow-md z-500 transition-transform duration-300 ${(show ? 'translate-y-0' : ' -translate-y-full ')} ${isOpen ? 'bg-[#111111] h-screen' : 'bg-black/70 h-fit'}`}
+            style={{ willChange: 'transform' }}> 
             <nav >
-                <div className="flex items-center justify-between p-[23px] ">
+                <div className="flex items-center justify-between px-[23px] py-2 w-full h-fit">
                     {/* Menubar */}
                     <div>
-                        <CiMenuBurger className='text-5xl w-[48px]' onClick={toggleMenu} />
+                        <CiMenuBurger className='text-4xl w-[40px]' onClick={toggleMenu} />
                     </div>
                     {/* Logo */}
                     <div>
-                        <Image src="/logo.png" alt="logo" width={60} height={60} />
+                        <Image src="/logo.png" alt="logo" width={60} height={60} quality={100} className="object-contain w-[70px] h-[70px]"/>
                     </div>
                     {/* Location Icon */}
                     <div>
-                        <CiLocationOn className='text-5xl w-[48px]' />
+                        <CiLocationOn className='text-4xl w-[40px]' />
                     </div>
                 </div>
                 {/* Nav Links */}
