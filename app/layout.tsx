@@ -3,6 +3,7 @@ import { Titillium_Web, Potta_One } from "next/font/google";
 import "./globals.css";
 import "./app.css";
 import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
 
 const potta_One = Potta_One({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );
